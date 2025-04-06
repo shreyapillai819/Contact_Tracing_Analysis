@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Single Infected, No Contacts",
+        "log_data": [],
+        "initial_infected": ["A"],
+        "contagious_period": 10,
+        "super_spreader_threshold": 1,
+        "expected_infected": ["A"],
+        "expected_super_spreaders": []
+}
+
+,
+    {
+        "name": "Super Spreader Case",
+        "log_data": [
+            ["A", "B", 10],
+            ["A", "C", 15],
+            ["A", "D", 20],
+            ["D", "E", 25],
+            ["B", "F", 30]
+        ],
+        "initial_infected": ["A"],
+        "contagious_period": 30,
+        "super_spreader_threshold": 2,  
+        "expected_infected": ["A", "B", "C", "D", "E", "F"],
+        "expected_super_spreaders": ["A", "B"]
+    },
+    {
+        "name": "Edge Case - No Interactions",
+        "log_data": [],
+        "initial_infected": ["X"],
+        "contagious_period": 10,
+        "super_spreader_threshold": 1,
+        "expected_infected": ["X"],
+        "expected_super_spreaders": []
+    }
+]
