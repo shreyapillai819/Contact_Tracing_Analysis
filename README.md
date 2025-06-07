@@ -1,6 +1,4 @@
-Here is the **updated README.md** file with instructions on **creating and using a virtual environment (`venv`)** before executing the program.  
 
----
 
 # **Contact Tracing System** 🦠  
 
